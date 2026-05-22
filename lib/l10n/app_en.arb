@@ -1,0 +1,18 @@
+{
+  "@@locale": "en",
+  "appTitle": "Money Manager",
+  "navHome": "Home",
+  "navCapture": "Capture",
+  "navInsights": "Insights",
+  "navMore": "More",
+  "homeWelcome": "Your personal finance cockpit",
+  "homeSubtitle": "Capture fast. See leaks. Track NAV.",
+  "captureTitle": "Quick capture",
+  "captureComingSoon": "Transaction capture coming next.",
+  "insightsTitle": "Monthly insights",
+  "insightsComingSoon": "Leak and change reports coming next.",
+  "settingsTitle": "Settings",
+  "baseCurrency": "Base reporting currency",
+  "language": "Language",
+  "languageSystem": "System default"
+}

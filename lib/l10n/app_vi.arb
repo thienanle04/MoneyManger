@@ -1,0 +1,18 @@
+{
+  "@@locale": "vi",
+  "appTitle": "Quản lý tiền",
+  "navHome": "Trang chủ",
+  "navCapture": "Ghi nhanh",
+  "navInsights": "Phân tích",
+  "navMore": "Thêm",
+  "homeWelcome": "Bảng điều khiển tài chính cá nhân",
+  "homeSubtitle": "Ghi nhanh. Thấy chỗ rò rỉ. Theo dõi NAV.",
+  "captureTitle": "Ghi nhanh",
+  "captureComingSoon": "Ghi giao dịch sẽ có trong bước tiếp theo.",
+  "insightsTitle": "Phân tích tháng",
+  "insightsComingSoon": "Báo cáo rò rỉ và thay đổi sẽ có trong bước tiếp theo.",
+  "settingsTitle": "Cài đặt",
+  "baseCurrency": "Tiền tệ báo cáo",
+  "language": "Ngôn ngữ",
+  "languageSystem": "Theo hệ thống"
+}
