@@ -187,6 +187,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'System default'**
   String get languageSystem;
+
+  /// No description provided for @supportedCurrencies.
+  ///
+  /// In en, this message translates to:
+  /// **'Supported currencies'**
+  String get supportedCurrencies;
+
+  /// No description provided for @dialogOk.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get dialogOk;
+
+  /// No description provided for @currencyCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} currencies'**
+  String currencyCount(int count);
 }
 
 class _AppLocalizationsDelegate

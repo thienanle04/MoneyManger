@@ -6,7 +6,7 @@ Personal finance cockpit (Flutter, local-first SQLite).
 
 - Flutter + Drift + Riverpod
 - `vi` / `en` via ARB (`lib/l10n/`)
-- Money as integer minor units (`lib/core/money/`)
+- Money as integer minor units (`lib/core/money/`); registry in `currencies.dart`
 - Append-only ledger events (`lib/data/ledger/`)
 
 ## Commands

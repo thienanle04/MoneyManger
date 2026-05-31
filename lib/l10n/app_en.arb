@@ -14,5 +14,13 @@
   "settingsTitle": "Settings",
   "baseCurrency": "Base reporting currency",
   "language": "Language",
-  "languageSystem": "System default"
+  "languageSystem": "System default",
+  "supportedCurrencies": "Supported currencies",
+  "dialogOk": "OK",
+  "currencyCount": "{count} currencies",
+  "@currencyCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  }
 }

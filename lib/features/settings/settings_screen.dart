@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_manager/core/money/currencies.dart';
 import 'package:money_manager/l10n/app_localizations.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class SettingsScreen extends StatelessWidget {
           const SizedBox(height: 16),
           ListTile(
             title: Text(l10n.baseCurrency),
-            subtitle: const Text('VND'),
+            subtitle: Text(Currencies.defaultBase),
             leading: const Icon(Icons.payments_outlined),
           ),
           ListTile(

@@ -52,4 +52,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languageSystem => 'System default';
+
+  @override
+  String get supportedCurrencies => 'Supported currencies';
+
+  @override
+  String get dialogOk => 'OK';
+
+  @override
+  String currencyCount(int count) {
+    return '$count currencies';
+  }
 }

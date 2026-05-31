@@ -1,6 +1,6 @@
 # Money Manager
 
-Personal finance app: fast capture, monthly leak insights, NAV, multi-currency (VND + USD), Vietnamese and English UI.
+Personal finance app: fast capture, monthly leak insights, NAV, multi-currency (30+ ISO codes with correct minor units), Vietnamese and English UI.
 
 ## Requirements
 

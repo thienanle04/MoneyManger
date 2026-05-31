@@ -14,5 +14,13 @@
   "settingsTitle": "Cài đặt",
   "baseCurrency": "Tiền tệ báo cáo",
   "language": "Ngôn ngữ",
-  "languageSystem": "Theo hệ thống"
+  "languageSystem": "Theo hệ thống",
+  "supportedCurrencies": "Loại tiền hỗ trợ",
+  "dialogOk": "Đóng",
+  "currencyCount": "{count} loại tiền",
+  "@currencyCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  }
 }

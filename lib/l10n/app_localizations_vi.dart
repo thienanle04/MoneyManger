@@ -53,4 +53,15 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get languageSystem => 'Theo hệ thống';
+
+  @override
+  String get supportedCurrencies => 'Loại tiền hỗ trợ';
+
+  @override
+  String get dialogOk => 'Đóng';
+
+  @override
+  String currencyCount(int count) {
+    return '$count loại tiền';
+  }
 }
