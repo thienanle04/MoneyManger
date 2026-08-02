@@ -36,20 +36,6 @@
 
 Read before implement. Rules under `.cursor/rules/` point here.
 
-## gstack (required)
-
-This repo requires [gstack](https://github.com/garrytan/gstack). User-level Cursor skills live in `~/.cursor/skills/gstack-*`.
-
-| Skill | When to use |
-|-------|-------------|
-| `gstack-office-hours` / `gstack-autoplan` | Plan before building |
-| `gstack-review` / `gstack-cso` | Code review / security audit |
-| `gstack-qa` / `gstack-browse` | Browser QA / web browsing |
-| `gstack-ship` | Ship PR end-to-end |
-| `gstack-investigate` | Debug / root-cause |
-
-Use `gstack-browse` for web browsing (not Chrome MCP tools). Runtime path: `~/.cursor/skills/gstack` (junction to `~/.claude/skills/gstack`).
-
 ## Notes
 
 - Source of truth for stack/layout: `.cursor/rules/money-manager.mdc`
