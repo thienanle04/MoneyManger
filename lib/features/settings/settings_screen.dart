@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:forui/forui.dart';
 import 'package:money_manager/core/money/currencies.dart';
 import 'package:money_manager/l10n/app_localizations.dart';
 
@@ -9,27 +10,19 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
-    return SafeArea(
-      child: ListView(
-        padding: const EdgeInsets.all(24),
-        children: [
-          Text(
-            l10n.settingsTitle,
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-          const SizedBox(height: 16),
-          ListTile(
-            title: Text(l10n.baseCurrency),
-            subtitle: Text(Currencies.defaultBase),
-            leading: const Icon(Icons.payments_outlined),
-          ),
-          ListTile(
-            title: Text(l10n.language),
-            subtitle: Text(l10n.languageSystem),
-            leading: const Icon(Icons.language_outlined),
-          ),
-        ],
-      ),
+    return FTileGroup(
+      children: [
+        FTile(
+          prefix: const Icon(FLucideIcons.banknote),
+          title: Text(l10n.baseCurrency),
+          subtitle: Text(Currencies.defaultBase),
+        ),
+        FTile(
+          prefix: const Icon(FLucideIcons.languages),
+          title: Text(l10n.language),
+          subtitle: Text(l10n.languageSystem),
+        ),
+      ],
     );
   }
 }

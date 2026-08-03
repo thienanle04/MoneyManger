@@ -27,6 +27,7 @@ flutter test
 
 - **Drift** — local SQLite schema (ledger events, accounts, import staging, FX, NAV snapshots)
 - **Riverpod** — app state and database providers
+- **Forui** — UI kit (`FTheme`, `FScaffold`, tiles/cards)
 - **ARB l10n** — `lib/l10n/app_en.arb`, `app_vi.arb`
 
-See [CLAUDE.md](CLAUDE.md) for agent-oriented notes.
+See [.cursor/rules/money-manager.mdc](.cursor/rules/money-manager.mdc) for agent-oriented notes.

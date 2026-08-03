@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:forui/forui.dart';
 import 'package:money_manager/l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,27 +8,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final theme = Theme.of(context);
 
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
+    return FCard(
+      builder: (context, style, _) => Padding(
+        padding: style.padding,
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              l10n.homeWelcome,
-              style: theme.textTheme.headlineMedium?.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+            Text(l10n.homeWelcome, style: style.titleTextStyle),
             const SizedBox(height: 8),
-            Text(
-              l10n.homeSubtitle,
-              style: theme.textTheme.bodyLarge?.copyWith(
-                color: theme.colorScheme.onSurfaceVariant,
-              ),
-            ),
+            Text(l10n.homeSubtitle, style: style.subtitleTextStyle),
           ],
         ),
       ),

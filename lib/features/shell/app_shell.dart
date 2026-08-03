@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:forui/forui.dart';
 import 'package:money_manager/l10n/app_localizations.dart';
 
 import '../capture/capture_screen.dart';
@@ -26,37 +27,40 @@ class _AppShellState extends State<AppShell> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final titles = [
+      l10n.navHome,
+      l10n.navCapture,
+      l10n.navInsights,
+      l10n.navMore,
+    ];
 
-    return Scaffold(
-      body: IndexedStack(
+    return FScaffold(
+      header: FHeader(title: Text(titles[_index])),
+      footer: FBottomNavigationBar(
         index: _index,
-        children: _screens,
-      ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _index,
-        onDestinationSelected: (i) => setState(() => _index = i),
-        destinations: [
-          NavigationDestination(
-            icon: const Icon(Icons.home_outlined),
-            selectedIcon: const Icon(Icons.home),
-            label: l10n.navHome,
+        onChange: (index) => setState(() => _index = index),
+        children: [
+          FBottomNavigationBarItem(
+            icon: const Icon(FLucideIcons.house),
+            label: Text(l10n.navHome),
           ),
-          NavigationDestination(
-            icon: const Icon(Icons.add_circle_outline),
-            selectedIcon: const Icon(Icons.add_circle),
-            label: l10n.navCapture,
+          FBottomNavigationBarItem(
+            icon: const Icon(FLucideIcons.circlePlus),
+            label: Text(l10n.navCapture),
           ),
-          NavigationDestination(
-            icon: const Icon(Icons.insights_outlined),
-            selectedIcon: const Icon(Icons.insights),
-            label: l10n.navInsights,
+          FBottomNavigationBarItem(
+            icon: const Icon(FLucideIcons.chartLine),
+            label: Text(l10n.navInsights),
           ),
-          NavigationDestination(
-            icon: const Icon(Icons.more_horiz),
-            selectedIcon: const Icon(Icons.more_horiz),
-            label: l10n.navMore,
+          FBottomNavigationBarItem(
+            icon: const Icon(FLucideIcons.ellipsis),
+            label: Text(l10n.navMore),
           ),
         ],
+      ),
+      child: IndexedStack(
+        index: _index,
+        children: _screens,
       ),
     );
   }

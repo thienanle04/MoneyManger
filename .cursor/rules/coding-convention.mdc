@@ -1,0 +1,39 @@
+---
+description: Money Manager Dart/Flutter coding conventions
+alwaysApply: true
+---
+
+# Coding Conventions
+
+Full detail: `.cursor/knowhow/coding-convention.md`
+
+## Naming
+
+- Files: `snake_case.dart`
+- Types/classes/enums: `PascalCase`
+- Members/locals: `camelCase`
+- Private: `_leadingUnderscore`
+- Generated: do not hand-edit `*.g.dart` / `app_localizations*.dart`
+
+## Money & ledger
+
+- Store amounts as `int` minor units via `Money` — never `double` for balances
+- Writes go through `LedgerWriter.append` — append-only; corrections = new events
+- Use `LedgerEventType` + `storageKey` for `eventType` column
+
+## Flutter / Forui / Drift / Riverpod
+
+- UI by feature under `lib/features/<feature>/` — prefer Forui widgets (`FScaffold`, `FHeader`, `FCard`, `FTile`, `FButton`, `FLucideIcons`)
+- Root: `MaterialApp` + `FTheme` + `toApproximateMaterialTheme()` (see `lib/app.dart`)
+- Schema tables under `lib/data/database/tables/`; bump `schemaVersion` + migration when changing tables
+- After Drift/table changes: `dart run build_runner build --delete-conflicting-outputs`
+- After ARB changes: `flutter gen-l10n`
+- User-facing strings: ARB only (`lib/l10n/app_en.arb`, `app_vi.arb`) — no hardcoded UI copy
+- Prefer `ConsumerWidget` / `ConsumerStatefulWidget` for Riverpod
+
+## Verify
+
+```bash
+flutter analyze
+flutter test
+```

@@ -1,0 +1,28 @@
+---
+description: Core skill routing — when to load Money Manager skills
+alwaysApply: true
+---
+
+# Core Skills
+
+Project skills: `.cursor/skills/`. Agents: `.cursor/agents/`.
+
+When the task matches, **read and follow** the corresponding `SKILL.md` (or agent file) before coding:
+
+| Trigger | Skill / agent |
+|---------|----------------|
+| New feature end-to-end | `feature-dev` |
+| Change existing feature | `change-request` |
+| Bug / error / regression | `bugfix` |
+| BA analysis / requirements | `business-analyst` |
+| Mobile UI Spec from BA | `ui-ux-design` |
+| Task breakdown from BA | `tech-lead` |
+| Screen / widget / l10n | `flutter-ui` |
+| Drift / ledger / Riverpod data | `flutter-data` |
+| Tests / QA / verify | `test-qa` |
+| Refactor without behavior change | `agents/refactor` |
+| Perf / jank / slow DB | `perf-review` |
+| Drift query efficiency | `drift-query` |
+| User-facing guide | `user-guide` |
+
+Explore code via **graphify** first (see `graphify.mdc`).

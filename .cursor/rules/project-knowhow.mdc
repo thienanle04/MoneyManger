@@ -1,0 +1,18 @@
+---
+description: Money Manager knowhow — read before implementing
+alwaysApply: true
+---
+
+# Project Knowhow
+
+Before implementing features, schema, or UI changes, read the relevant files under `.cursor/knowhow/`:
+
+| File | Use when |
+|------|----------|
+| `know-how.md` | Structure, Drift schema, providers, commands |
+| `system-features.md` | Product flows, screens, ledger event types |
+| `coding-convention.md` | Dart/Flutter naming and patterns |
+| `decisions.md` | Architecture decisions — do not contradict without re-evaluating |
+| `lessons-learned.md` | Past mistakes to avoid |
+
+Prefer these over guessing. Update knowhow when you change schema, ledger rules, or established patterns.

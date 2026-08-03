@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:forui/forui.dart';
 import 'package:money_manager/l10n/app_localizations.dart';
 
 class InsightsScreen extends StatelessWidget {
@@ -8,18 +9,16 @@ class InsightsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
+    return FCard(
+      builder: (context, style, _) => Padding(
+        padding: style.padding,
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              l10n.insightsTitle,
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
-            const SizedBox(height: 12),
-            Text(l10n.insightsComingSoon),
+            Text(l10n.insightsTitle, style: style.titleTextStyle),
+            const SizedBox(height: 8),
+            Text(l10n.insightsComingSoon, style: style.subtitleTextStyle),
           ],
         ),
       ),
