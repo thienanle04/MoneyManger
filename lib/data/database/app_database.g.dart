@@ -4280,7 +4280,16 @@ class $$AccountsTableTableManager
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$AccountsTable, Account>(table),
+                  BaseReferences<_$AppDatabase, $AccountsTable, Account>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),
@@ -4474,7 +4483,16 @@ class $$CategoriesTableTableManager
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$CategoriesTable, Category>(table),
+                  BaseReferences<_$AppDatabase, $CategoriesTable, Category>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),
@@ -4630,7 +4648,16 @@ class $$PeopleTableTableManager
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$PeopleTable, PeopleData>(table),
+                  BaseReferences<_$AppDatabase, $PeopleTable, PeopleData>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),
@@ -4995,7 +5022,16 @@ class $$LedgerEventsTableTableManager
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$LedgerEventsTable, LedgerEvent>(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $LedgerEventsTable,
+                    LedgerEvent
+                  >(db, table, e),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),
@@ -5239,7 +5275,16 @@ class $$ExchangeRatesTableTableManager
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$ExchangeRatesTable, ExchangeRate>(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $ExchangeRatesTable,
+                    ExchangeRate
+                  >(db, table, e),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),
@@ -5295,10 +5340,7 @@ final class $$ImportBatchesTableReferences
   static MultiTypedResultKey<$ImportRowStagingTable, List<ImportRowStagingData>>
   _importRowStagingRefsTable(_$AppDatabase db) => MultiTypedResultKey.fromTable(
     db.importRowStaging,
-    aliasName: $_aliasNameGenerator(
-      db.importBatches.id,
-      db.importRowStaging.batchId,
-    ),
+    aliasName: 'import_batches__id__import_row_staging__batch_id',
   );
 
   $$ImportRowStagingTableProcessedTableManager get importRowStagingRefs {
@@ -5541,7 +5583,7 @@ class $$ImportBatchesTableTableManager
           withReferenceMapper: (p0) => p0
               .map(
                 (e) => (
-                  e.readTable(table),
+                  e.readTable<$ImportBatchesTable, ImportBatche>(table),
                   $$ImportBatchesTableReferences(db, table, e),
                 ),
               )
@@ -5556,10 +5598,11 @@ class $$ImportBatchesTableTableManager
               getPrefetchedDataCallback: (items) async {
                 return [
                   if (importRowStagingRefs)
-                    await $_getPrefetchedData<
+                    await $_getPrefetchedDataByColumns<
                       ImportBatche,
                       $ImportBatchesTable,
-                      ImportRowStagingData
+                      ImportRowStagingData,
+                      $ImportRowStagingTable
                     >(
                       currentTable: table,
                       referencedTable: $$ImportBatchesTableReferences
@@ -5570,8 +5613,8 @@ class $$ImportBatchesTableTableManager
                             table,
                             p0,
                           ).importRowStagingRefs,
-                      referencedItemsForCurrentItem: (item, referencedItems) =>
-                          referencedItems.where((e) => e.batchId == item.id),
+                      currentColumn: 'id',
+                      referencedColumn: 'batch_id',
                       typedResults: items,
                     ),
                 ];
@@ -5634,10 +5677,8 @@ final class $$ImportRowStagingTableReferences
     super.$_typedResult,
   );
 
-  static $ImportBatchesTable _batchIdTable(_$AppDatabase db) =>
-      db.importBatches.createAlias(
-        $_aliasNameGenerator(db.importRowStaging.batchId, db.importBatches.id),
-      );
+  static $ImportBatchesTable _batchIdTable(_$AppDatabase db) => db.importBatches
+      .createAlias('import_row_staging__batch_id__import_batches__id');
 
   $$ImportBatchesTableProcessedTableManager get batchId {
     final $_column = $_itemColumn<String>('batch_id')!;
@@ -5927,7 +5968,9 @@ class $$ImportRowStagingTableTableManager
           withReferenceMapper: (p0) => p0
               .map(
                 (e) => (
-                  e.readTable(table),
+                  e.readTable<$ImportRowStagingTable, ImportRowStagingData>(
+                    table,
+                  ),
                   $$ImportRowStagingTableReferences(db, table, e),
                 ),
               )
@@ -6196,7 +6239,16 @@ class $$NavSnapshotsTableTableManager
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$NavSnapshotsTable, NavSnapshot>(table),
+                  BaseReferences<
+                    _$AppDatabase,
+                    $NavSnapshotsTable,
+                    NavSnapshot
+                  >(db, table, e),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),
@@ -6335,7 +6387,16 @@ class $$AppSettingsTableTableManager
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable<$AppSettingsTable, AppSetting>(table),
+                  BaseReferences<_$AppDatabase, $AppSettingsTable, AppSetting>(
+                    db,
+                    table,
+                    e,
+                  ),
+                ),
+              )
               .toList(),
           prefetchHooksCallback: null,
         ),

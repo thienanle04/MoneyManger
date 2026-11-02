@@ -18,5 +18,22 @@ void main() {
       final m = Money.parse('1,200,000', currencyCode: 'VND');
       expect(m?.minorUnits, 1_200_000);
     });
+
+    test('format places VND symbol after digits', () {
+      const m = Money(minorUnits: 5000, currencyCode: 'VND');
+      expect(m.format(), '5,000đ');
+    });
+
+    test('format places US\$ before digits', () {
+      const m = Money(minorUnits: 500, currencyCode: 'USD');
+      expect(m.format(), 'US\$5.00');
+    });
+
+    test('format distinguishes AUD from USD', () {
+      const usd = Money(minorUnits: 1000, currencyCode: 'USD');
+      const aud = Money(minorUnits: 1000, currencyCode: 'AUD');
+      expect(usd.format(), 'US\$10.00');
+      expect(aud.format(), 'AUD\$10.00');
+    });
   });
 }

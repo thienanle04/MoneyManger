@@ -110,17 +110,35 @@ abstract class AppLocalizations {
   /// **'Home'**
   String get navHome;
 
-  /// No description provided for @navCapture.
+  /// No description provided for @navTrans.
   ///
   /// In en, this message translates to:
-  /// **'Capture'**
-  String get navCapture;
+  /// **'Trans.'**
+  String get navTrans;
+
+  /// No description provided for @transEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No transactions this month.'**
+  String get transEmpty;
+
+  /// No description provided for @transAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add transaction'**
+  String get transAdd;
 
   /// No description provided for @navInsights.
   ///
   /// In en, this message translates to:
   /// **'Insights'**
   String get navInsights;
+
+  /// No description provided for @navAccounts.
+  ///
+  /// In en, this message translates to:
+  /// **'Accounts'**
+  String get navAccounts;
 
   /// No description provided for @navMore.
   ///
@@ -140,6 +158,42 @@ abstract class AppLocalizations {
   /// **'Capture fast. See leaks. Track NAV.'**
   String get homeSubtitle;
 
+  /// No description provided for @homeAccounts.
+  ///
+  /// In en, this message translates to:
+  /// **'Accounts'**
+  String get homeAccounts;
+
+  /// No description provided for @homeRecent.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent'**
+  String get homeRecent;
+
+  /// No description provided for @homeThisMonth.
+  ///
+  /// In en, this message translates to:
+  /// **'This month'**
+  String get homeThisMonth;
+
+  /// No description provided for @homeTopCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Top categories'**
+  String get homeTopCategories;
+
+  /// No description provided for @homeNoEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'No transactions yet. Capture your first one.'**
+  String get homeNoEvents;
+
+  /// No description provided for @homeEmptyAccounts.
+  ///
+  /// In en, this message translates to:
+  /// **'No accounts yet.'**
+  String get homeEmptyAccounts;
+
   /// No description provided for @captureTitle.
   ///
   /// In en, this message translates to:
@@ -151,6 +205,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Transaction capture coming next.'**
   String get captureComingSoon;
+
+  /// No description provided for @captureTypeExpense.
+  ///
+  /// In en, this message translates to:
+  /// **'Expense'**
+  String get captureTypeExpense;
+
+  /// No description provided for @captureTypeIncome.
+  ///
+  /// In en, this message translates to:
+  /// **'Income'**
+  String get captureTypeIncome;
+
+  /// No description provided for @captureTypeTransfer.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer'**
+  String get captureTypeTransfer;
+
+  /// No description provided for @captureAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount'**
+  String get captureAmount;
+
+  /// No description provided for @captureAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get captureAccount;
+
+  /// No description provided for @captureFromAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'From'**
+  String get captureFromAccount;
+
+  /// No description provided for @captureToAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'To'**
+  String get captureToAccount;
+
+  /// No description provided for @captureCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Category'**
+  String get captureCategory;
+
+  /// No description provided for @captureNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Note'**
+  String get captureNote;
+
+  /// No description provided for @captureNoteHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Add note…'**
+  String get captureNoteHint;
+
+  /// No description provided for @captureSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get captureSave;
+
+  /// No description provided for @captureContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get captureContinue;
+
+  /// No description provided for @captureSaving.
+  ///
+  /// In en, this message translates to:
+  /// **'Saving…'**
+  String get captureSaving;
+
+  /// No description provided for @captureSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved {amount}'**
+  String captureSaved(String amount);
+
+  /// No description provided for @captureDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get captureDescription;
+
+  /// No description provided for @captureDescriptionHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Add details…'**
+  String get captureDescriptionHint;
+
+  /// No description provided for @captureDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get captureDone;
+
+  /// No description provided for @captureCalculator.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculator'**
+  String get captureCalculator;
+
+  /// No description provided for @captureRepeatLast.
+  ///
+  /// In en, this message translates to:
+  /// **'Repeat last'**
+  String get captureRepeatLast;
+
+  /// No description provided for @captureDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Date'**
+  String get captureDate;
+
+  /// No description provided for @captureNoAccountsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No accounts yet'**
+  String get captureNoAccountsTitle;
+
+  /// No description provided for @captureNoAccountsBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Create an account to start tracking.'**
+  String get captureNoAccountsBody;
+
+  /// No description provided for @captureCreateAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get captureCreateAccount;
+
+  /// No description provided for @captureNoCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'No categories — add one in Settings.'**
+  String get captureNoCategories;
+
+  /// No description provided for @captureInvalidAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid amount greater than zero.'**
+  String get captureInvalidAmount;
+
+  /// No description provided for @captureSelectAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Select an account.'**
+  String get captureSelectAccount;
+
+  /// No description provided for @captureSelectDestAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a destination account.'**
+  String get captureSelectDestAccount;
+
+  /// No description provided for @captureSelectCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a category.'**
+  String get captureSelectCategory;
+
+  /// No description provided for @captureSameAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'From and To must be different.'**
+  String get captureSameAccount;
+
+  /// No description provided for @captureCrossCurrencyBlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Cross-currency transfers come in a later milestone.'**
+  String get captureCrossCurrencyBlocked;
+
+  /// No description provided for @captureError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not save. Try again.'**
+  String get captureError;
 
   /// No description provided for @insightsTitle.
   ///
@@ -194,11 +434,191 @@ abstract class AppLocalizations {
   /// **'Supported currencies'**
   String get supportedCurrencies;
 
+  /// No description provided for @settingsAccounts.
+  ///
+  /// In en, this message translates to:
+  /// **'Accounts'**
+  String get settingsAccounts;
+
+  /// No description provided for @settingsCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Categories'**
+  String get settingsCategories;
+
+  /// No description provided for @settingsManageAccounts.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage accounts'**
+  String get settingsManageAccounts;
+
+  /// No description provided for @settingsManageCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage categories'**
+  String get settingsManageCategories;
+
+  /// No description provided for @accountName.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get accountName;
+
+  /// No description provided for @accountType.
+  ///
+  /// In en, this message translates to:
+  /// **'Type'**
+  String get accountType;
+
+  /// No description provided for @accountCurrency.
+  ///
+  /// In en, this message translates to:
+  /// **'Currency'**
+  String get accountCurrency;
+
+  /// No description provided for @accountIncludeInNav.
+  ///
+  /// In en, this message translates to:
+  /// **'Include in NAV'**
+  String get accountIncludeInNav;
+
+  /// No description provided for @accountOpeningBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Opening balance'**
+  String get accountOpeningBalance;
+
+  /// No description provided for @accountAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add account'**
+  String get accountAdd;
+
+  /// No description provided for @accountEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit account'**
+  String get accountEdit;
+
+  /// No description provided for @accountSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save account'**
+  String get accountSave;
+
+  /// No description provided for @accountTypeCash.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash'**
+  String get accountTypeCash;
+
+  /// No description provided for @accountTypeBank.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank'**
+  String get accountTypeBank;
+
+  /// No description provided for @accountTypeEwallet.
+  ///
+  /// In en, this message translates to:
+  /// **'E-wallet'**
+  String get accountTypeEwallet;
+
+  /// No description provided for @accountGroupCash.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash'**
+  String get accountGroupCash;
+
+  /// No description provided for @accountGroupBank.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank accounts'**
+  String get accountGroupBank;
+
+  /// No description provided for @accountGroupEwallet.
+  ///
+  /// In en, this message translates to:
+  /// **'E-wallets'**
+  String get accountGroupEwallet;
+
+  /// No description provided for @accountGroupCredit.
+  ///
+  /// In en, this message translates to:
+  /// **'Credit'**
+  String get accountGroupCredit;
+
+  /// No description provided for @accountGroupLoan.
+  ///
+  /// In en, this message translates to:
+  /// **'Loans'**
+  String get accountGroupLoan;
+
+  /// No description provided for @accountGroupOther.
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get accountGroupOther;
+
+  /// No description provided for @accountsAssets.
+  ///
+  /// In en, this message translates to:
+  /// **'Assets'**
+  String get accountsAssets;
+
+  /// No description provided for @accountsLiabilities.
+  ///
+  /// In en, this message translates to:
+  /// **'Liabilities'**
+  String get accountsLiabilities;
+
+  /// No description provided for @accountsTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get accountsTotal;
+
+  /// No description provided for @categoryName.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get categoryName;
+
+  /// No description provided for @categoryIsIncome.
+  ///
+  /// In en, this message translates to:
+  /// **'Income category'**
+  String get categoryIsIncome;
+
+  /// No description provided for @categoryAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add category'**
+  String get categoryAdd;
+
+  /// No description provided for @categoryEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit category'**
+  String get categoryEdit;
+
+  /// No description provided for @categorySave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save category'**
+  String get categorySave;
+
   /// No description provided for @dialogOk.
   ///
   /// In en, this message translates to:
   /// **'OK'**
   String get dialogOk;
+
+  /// No description provided for @dialogCancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get dialogCancel;
 
   /// No description provided for @currencyCount.
   ///

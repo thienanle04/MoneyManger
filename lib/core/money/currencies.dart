@@ -9,8 +9,14 @@ class Currencies {
 
   /// ISO 4217 codes the app knows how to format and parse precisely.
   static const List<Currency> supported = [
-  Currency(code: 'VND', name: 'Vietnamese Dong', symbol: '₫', decimalDigits: 0),
-  Currency(code: 'USD', name: 'US Dollar', symbol: r'$', decimalDigits: 2),
+  Currency(
+    code: 'VND',
+    name: 'Vietnamese Dong',
+    symbol: 'đ',
+    decimalDigits: 0,
+    symbolPlacement: CurrencySymbolPlacement.suffix,
+  ),
+  Currency(code: 'USD', name: 'US Dollar', symbol: r'US$', decimalDigits: 2),
   Currency(code: 'EUR', name: 'Euro', symbol: '€', decimalDigits: 2),
   Currency(code: 'GBP', name: 'British Pound', symbol: '£', decimalDigits: 2),
   Currency(code: 'JPY', name: 'Japanese Yen', symbol: '¥', decimalDigits: 0),
@@ -18,7 +24,7 @@ class Currencies {
   Currency(code: 'SGD', name: 'Singapore Dollar', symbol: r'S$', decimalDigits: 2),
   Currency(code: 'THB', name: 'Thai Baht', symbol: '฿', decimalDigits: 2),
   Currency(code: 'KRW', name: 'South Korean Won', symbol: '₩', decimalDigits: 0),
-  Currency(code: 'AUD', name: 'Australian Dollar', symbol: r'A$', decimalDigits: 2),
+  Currency(code: 'AUD', name: 'Australian Dollar', symbol: r'AUD$', decimalDigits: 2),
   Currency(code: 'CAD', name: 'Canadian Dollar', symbol: r'C$', decimalDigits: 2),
   Currency(code: 'CHF', name: 'Swiss Franc', symbol: 'CHF', decimalDigits: 2),
   Currency(code: 'HKD', name: 'Hong Kong Dollar', symbol: r'HK$', decimalDigits: 2),
@@ -32,7 +38,13 @@ class Currencies {
   Currency(code: 'SAR', name: 'Saudi Riyal', symbol: '﷼', decimalDigits: 2),
   Currency(code: 'BRL', name: 'Brazilian Real', symbol: r'R$', decimalDigits: 2),
   Currency(code: 'MXN', name: 'Mexican Peso', symbol: r'M$', decimalDigits: 2),
-  Currency(code: 'PLN', name: 'Polish Złoty', symbol: 'zł', decimalDigits: 2),
+  Currency(
+    code: 'PLN',
+    name: 'Polish Złoty',
+    symbol: 'zł',
+    decimalDigits: 2,
+    symbolPlacement: CurrencySymbolPlacement.suffix,
+  ),
   Currency(code: 'SEK', name: 'Swedish Krona', symbol: 'kr', decimalDigits: 2),
   Currency(code: 'NOK', name: 'Norwegian Krone', symbol: 'kr', decimalDigits: 2),
   Currency(code: 'DKK', name: 'Danish Krone', symbol: 'kr', decimalDigits: 2),

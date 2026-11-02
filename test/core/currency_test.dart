@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:money_manager/core/money/currencies.dart';
+import 'package:money_manager/core/money/currency.dart';
 import 'package:money_manager/core/money/money.dart';
 
 void main() {
@@ -22,6 +23,18 @@ void main() {
       final list = Currencies.sortedForPicker();
       expect(list.first.code, 'VND');
       expect(list[1].code, 'USD');
+    });
+
+    test('USD uses US\$ symbol with prefix placement', () {
+      final usd = Currencies.resolve('USD');
+      expect(usd.symbol, 'US\$');
+      expect(usd.symbolPlacement, CurrencySymbolPlacement.prefix);
+    });
+
+    test('VND uses đ with suffix placement', () {
+      final vnd = Currencies.resolve('VND');
+      expect(vnd.symbol, 'đ');
+      expect(vnd.symbolPlacement, CurrencySymbolPlacement.suffix);
     });
   });
 
