@@ -1,5 +1,5 @@
 ---
-description: Money Manager project stack, layout, commands, and next steps
+description: Money Manager project stack, layout, and commands
 alwaysApply: true
 ---
 
@@ -34,13 +34,8 @@ flutter run
 - `lib/domain/` — enums (e.g. `LedgerEventType`)
 - `lib/features/` — UI by feature (home, capture, insights, settings, shell)
 
-## Design
+## Docs
 
+- Domain language: `GLOSSARY.md`
+- Decisions: `docs/adr/` — do not contradict an ADR without re-evaluating it
 - Design doc: `~/.gstack/projects/MoneyManger/Admin-main-design-20260802-162400.md`
-
-## Next implementation steps
-
-1. Instant capture form + account/category CRUD
-2. Balance projection from ledger events
-3. CSV/XLSX import staging
-4. Monthly insights + NAV snapshots
